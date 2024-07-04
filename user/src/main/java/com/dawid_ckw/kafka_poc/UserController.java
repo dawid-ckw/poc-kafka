@@ -1,5 +1,6 @@
 package com.dawid_ckw.kafka_poc;
 
+import io.confluent.developer.MessageRequested;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,7 +13,7 @@ public class UserController {
     private KafkaTemplate<String, MessageRequested> messageProducer;
 
     @GetMapping("/me")
-    public UserResponse me(){
+    public UserResponse me() {
         this.messageProducer.send("user.requested", new MessageRequested("Dawid"));
         return new UserResponse(1, "Dawid");
     }

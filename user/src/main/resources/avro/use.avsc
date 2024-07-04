@@ -1,0 +1,12 @@
+{
+  "namespace": "io.confluent.developer",
+  "type": "record",
+  "name": "MessageRequested",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string",
+      "avro.java.string": "String"
+    }
+  ]
+}
