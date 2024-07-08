@@ -1,5 +1,6 @@
 package com.dawid_ckw.kafka_poc;
 
+import com.dawid_ckw.avro.MessageRequested;
 import lombok.extern.apachecommons.CommonsLog;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.springframework.kafka.annotation.KafkaListener;

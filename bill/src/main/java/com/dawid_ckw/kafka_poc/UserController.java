@@ -8,12 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
 
-    @Autowired
-    private KafkaTemplate<String, MessageRequested> messageProducer;
-
+  
     @GetMapping("/bills")
     public UserResponse me(){
-        this.messageProducer.send("user.requested", new MessageRequested("Dawid"));
-        return new UserResponse(1, "Dawid");
+        return new UserResponse(1, "BILL");
     }
 }
