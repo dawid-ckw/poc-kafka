@@ -1,17 +1,16 @@
 {
   "namespace": "com.dawid_ckw.avro",
   "type": "record",
-  "name": "MessageRequested",
+  "name": "StringToUpper",
   "fields": [
     {
-      "name": "name",
+      "name": "text",
       "type": "string",
       "avro.java.string": "String"
     },
     {
-      "name": "age",
+      "name": "length",
       "type": "int",
-      "default": null,
       "avro.java.string": "Integer"
     }
   ]

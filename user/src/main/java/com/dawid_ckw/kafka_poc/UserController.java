@@ -1,8 +1,5 @@
 package com.dawid_ckw.kafka_poc;
 
-
-
-import ch.qos.logback.core.util.TimeUtil;
 import com.dawid_ckw.avro.MessageRequested;
 import com.dawid_ckw.kafka_poc.Config.KafkaTopics;
 import org.apache.kafka.clients.producer.ProducerRecord;
@@ -33,6 +30,8 @@ public class UserController {
         RequestReplyFuture<String, String, String> future =  apiTemplate.sendAndReceive(record);
         String lowerCase = future.get(10, TimeUnit.SECONDS).value();
         System.out.println(lowerCase);
+
+        // simple event
         this.messageProducer.send(KafkaTopics.TOPIC_USER_REQUESTED, new MessageRequested("Dawid", 20));
         return new UserResponse(1, "Dawid" + lowerCase);
     }

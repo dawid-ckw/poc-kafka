@@ -86,12 +86,9 @@
                     <schemaRegistryUrls>
                         <param>http://localhost:8085</param>
                     </schemaRegistryUrls>
-                    <outputDirectory>src/main/resources/avro</outputDirectory>
-                    <subjectPatterns>
-                        <param>^TestSubject000-(key|value)$</param>
-                    </subjectPatterns>
                    <subjects >
-                       <user.requested-value>src/main/resources/avro/use.avsc</user.requested-value>
+
+                       <message-requested-value>src/main/resources/avro/MessageRequested.avsc</message-requested-value>
                    </subjects>
                 </configuration>
                 <goals>
@@ -103,9 +100,15 @@
                 <artifactId>avro-maven-plugin</artifactId>
                 <version>1.11.3</version>
                 <configuration>
-                    <sourceDirectory>src/main/resources/avro</sourceDirectory>
-                    <outputDirectory>${project.build.directory}/generated-sources</outputDirectory>
+                    <sourceDirectory>${project.basedir}/src/main/resources/avro</sourceDirectory>
+                    <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+                    <fieldVisibility>PRIVATE</fieldVisibility>
+                    <customConversions>org.apache.avro.Conversions$UUIDConversion</customConversions>
+                    <enableDecimalLogicalType>true</enableDecimalLogicalType>
                     <stringType>String</stringType>
+                    <includes>
+                        <include>*.avsc</include>
+                    </includes>
                 </configuration>
                 <executions>
                     <execution>

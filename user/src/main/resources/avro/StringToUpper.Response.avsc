@@ -1,10 +1,10 @@
 {
-  "namespace": "io.confluent.developer",
+  "namespace": "com.dawid_ckw.avro",
   "type": "record",
-  "name": "MessageRequested",
+  "name": "StringToUpper.Response",
   "fields": [
     {
-      "name": "name",
+      "name": "text",
       "type": "string",
       "avro.java.string": "String"
     }

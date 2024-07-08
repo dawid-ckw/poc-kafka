@@ -1,0 +1,17 @@
+{
+  "namespace": "com.dawid_ckw.avro",
+  "type": "record",
+  "name": "MessageRequested",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string",
+      "avro.java.string": "String"
+    },
+    {
+      "name": "age",
+      "type": "int",
+      "avro.java.string": "Integer"
+    }
+  ]
+}
