@@ -1,0 +1,12 @@
+{
+  "namespace": "com.dawid_ckw.avro",
+  "type": "record",
+  "name": "StringToUpper.Response",
+  "fields": [
+    {
+      "name": "text",
+      "type": "string",
+      "avro.java.string": "String"
+    }
+  ]
+}

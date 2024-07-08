@@ -1,0 +1,17 @@
+{
+  "namespace": "com.dawid_ckw.avro",
+  "type": "record",
+  "name": "StringToUpper",
+  "fields": [
+    {
+      "name": "text",
+      "type": "string",
+      "avro.java.string": "String"
+    },
+    {
+      "name": "length",
+      "type": "int",
+      "avro.java.string": "Integer"
+    }
+  ]
+}
