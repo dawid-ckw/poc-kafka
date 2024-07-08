@@ -16,7 +16,7 @@ public class UserController {
 
     @GetMapping("/me")
     public UserResponse me() {
-        this.messageProducer.send("user.requested", new MessageRequested("Dawid"));
+        this.messageProducer.send("user.requested", new MessageRequested("Dawid", 20));
         return new UserResponse(1, "Dawid");
     }
 }

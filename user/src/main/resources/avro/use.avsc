@@ -7,6 +7,12 @@
       "name": "name",
       "type": "string",
       "avro.java.string": "String"
+    },
+    {
+      "name": "age",
+      "type": "int",
+      "default": null,
+      "avro.java.string": "Integer"
     }
   ]
 }

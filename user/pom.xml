@@ -8,7 +8,13 @@
         <artifactId>kafka-poc</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-
+    <pluginRepositories>
+        <pluginRepository>
+            <id>confluent</id>
+            <name>Confluent</name>
+            <url>https://packages.confluent.io/maven/</url>
+        </pluginRepository>
+    </pluginRepositories>
     <artifactId>user</artifactId>
 
     <properties>
@@ -78,12 +84,15 @@
                 <version>7.6.1</version>
                 <configuration>
                     <schemaRegistryUrls>
-                        <param>http://localhost:8081</param>
+                        <param>http://localhost:8085</param>
                     </schemaRegistryUrls>
                     <outputDirectory>src/main/resources/avro</outputDirectory>
                     <subjectPatterns>
                         <param>^TestSubject000-(key|value)$</param>
                     </subjectPatterns>
+                   <subjects >
+                       <user.requested-value>src/main/resources/avro/use.avsc</user.requested-value>
+                   </subjects>
                 </configuration>
                 <goals>
                     <goal>register</goal>
