@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package StringToUpper;
+package com.dawid_ckw.avro;
 
 import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
@@ -13,26 +13,26 @@ import org.apache.avro.message.BinaryMessageDecoder;
 import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
-public class Response extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -4827674442610298846L;
+public class StringToUpperResponse extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
+  private static final long serialVersionUID = 1435009223751030505L;
 
 
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Response\",\"namespace\":\"StringToUpper\",\"fields\":[{\"name\":\"text\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"avro.java.string\":\"String\"}]}");
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"StringToUpperResponse\",\"namespace\":\"com.dawid_ckw.avro\",\"fields\":[{\"name\":\"text\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"avro.java.string\":\"String\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static final SpecificData MODEL$ = new SpecificData();
 
-  private static final BinaryMessageEncoder<Response> ENCODER =
+  private static final BinaryMessageEncoder<StringToUpperResponse> ENCODER =
       new BinaryMessageEncoder<>(MODEL$, SCHEMA$);
 
-  private static final BinaryMessageDecoder<Response> DECODER =
+  private static final BinaryMessageDecoder<StringToUpperResponse> DECODER =
       new BinaryMessageDecoder<>(MODEL$, SCHEMA$);
 
   /**
    * Return the BinaryMessageEncoder instance used by this class.
    * @return the message encoder used by this class
    */
-  public static BinaryMessageEncoder<Response> getEncoder() {
+  public static BinaryMessageEncoder<StringToUpperResponse> getEncoder() {
     return ENCODER;
   }
 
@@ -40,7 +40,7 @@ public class Response extends org.apache.avro.specific.SpecificRecordBase implem
    * Return the BinaryMessageDecoder instance used by this class.
    * @return the message decoder used by this class
    */
-  public static BinaryMessageDecoder<Response> getDecoder() {
+  public static BinaryMessageDecoder<StringToUpperResponse> getDecoder() {
     return DECODER;
   }
 
@@ -49,12 +49,12 @@ public class Response extends org.apache.avro.specific.SpecificRecordBase implem
    * @param resolver a {@link SchemaStore} used to find schemas by fingerprint
    * @return a BinaryMessageDecoder instance for this class backed by the given SchemaStore
    */
-  public static BinaryMessageDecoder<Response> createDecoder(SchemaStore resolver) {
+  public static BinaryMessageDecoder<StringToUpperResponse> createDecoder(SchemaStore resolver) {
     return new BinaryMessageDecoder<>(MODEL$, SCHEMA$, resolver);
   }
 
   /**
-   * Serializes this Response to a ByteBuffer.
+   * Serializes this StringToUpperResponse to a ByteBuffer.
    * @return a buffer holding the serialized data for this instance
    * @throws java.io.IOException if this instance could not be serialized
    */
@@ -63,12 +63,12 @@ public class Response extends org.apache.avro.specific.SpecificRecordBase implem
   }
 
   /**
-   * Deserializes a Response from a ByteBuffer.
+   * Deserializes a StringToUpperResponse from a ByteBuffer.
    * @param b a byte buffer holding serialized data for an instance of this class
-   * @return a Response instance decoded from the given buffer
+   * @return a StringToUpperResponse instance decoded from the given buffer
    * @throws java.io.IOException if the given bytes could not be deserialized into an instance of this class
    */
-  public static Response fromByteBuffer(
+  public static StringToUpperResponse fromByteBuffer(
       java.nio.ByteBuffer b) throws java.io.IOException {
     return DECODER.decode(b);
   }
@@ -80,13 +80,13 @@ public class Response extends org.apache.avro.specific.SpecificRecordBase implem
    * to their default values from the schema.  If that is desired then
    * one should use <code>newBuilder()</code>.
    */
-  public Response() {}
+  public StringToUpperResponse() {}
 
   /**
    * All-args constructor.
    * @param text The new value for text
    */
-  public Response(java.lang.String text) {
+  public StringToUpperResponse(java.lang.String text) {
     this.text = text;
   }
 
@@ -133,45 +133,45 @@ public class Response extends org.apache.avro.specific.SpecificRecordBase implem
   }
 
   /**
-   * Creates a new Response RecordBuilder.
-   * @return A new Response RecordBuilder
+   * Creates a new StringToUpperResponse RecordBuilder.
+   * @return A new StringToUpperResponse RecordBuilder
    */
-  public static StringToUpper.Response.Builder newBuilder() {
-    return new StringToUpper.Response.Builder();
+  public static com.dawid_ckw.avro.StringToUpperResponse.Builder newBuilder() {
+    return new com.dawid_ckw.avro.StringToUpperResponse.Builder();
   }
 
   /**
-   * Creates a new Response RecordBuilder by copying an existing Builder.
+   * Creates a new StringToUpperResponse RecordBuilder by copying an existing Builder.
    * @param other The existing builder to copy.
-   * @return A new Response RecordBuilder
+   * @return A new StringToUpperResponse RecordBuilder
    */
-  public static StringToUpper.Response.Builder newBuilder(StringToUpper.Response.Builder other) {
+  public static com.dawid_ckw.avro.StringToUpperResponse.Builder newBuilder(com.dawid_ckw.avro.StringToUpperResponse.Builder other) {
     if (other == null) {
-      return new StringToUpper.Response.Builder();
+      return new com.dawid_ckw.avro.StringToUpperResponse.Builder();
     } else {
-      return new StringToUpper.Response.Builder(other);
+      return new com.dawid_ckw.avro.StringToUpperResponse.Builder(other);
     }
   }
 
   /**
-   * Creates a new Response RecordBuilder by copying an existing Response instance.
+   * Creates a new StringToUpperResponse RecordBuilder by copying an existing StringToUpperResponse instance.
    * @param other The existing instance to copy.
-   * @return A new Response RecordBuilder
+   * @return A new StringToUpperResponse RecordBuilder
    */
-  public static StringToUpper.Response.Builder newBuilder(StringToUpper.Response other) {
+  public static com.dawid_ckw.avro.StringToUpperResponse.Builder newBuilder(com.dawid_ckw.avro.StringToUpperResponse other) {
     if (other == null) {
-      return new StringToUpper.Response.Builder();
+      return new com.dawid_ckw.avro.StringToUpperResponse.Builder();
     } else {
-      return new StringToUpper.Response.Builder(other);
+      return new com.dawid_ckw.avro.StringToUpperResponse.Builder(other);
     }
   }
 
   /**
-   * RecordBuilder for Response instances.
+   * RecordBuilder for StringToUpperResponse instances.
    */
   @org.apache.avro.specific.AvroGenerated
-  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<Response>
-    implements org.apache.avro.data.RecordBuilder<Response> {
+  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<StringToUpperResponse>
+    implements org.apache.avro.data.RecordBuilder<StringToUpperResponse> {
 
     private java.lang.String text;
 
@@ -184,7 +184,7 @@ public class Response extends org.apache.avro.specific.SpecificRecordBase implem
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(StringToUpper.Response.Builder other) {
+    private Builder(com.dawid_ckw.avro.StringToUpperResponse.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.text)) {
         this.text = data().deepCopy(fields()[0].schema(), other.text);
@@ -193,10 +193,10 @@ public class Response extends org.apache.avro.specific.SpecificRecordBase implem
     }
 
     /**
-     * Creates a Builder by copying an existing Response instance
+     * Creates a Builder by copying an existing StringToUpperResponse instance
      * @param other The existing instance to copy.
      */
-    private Builder(StringToUpper.Response other) {
+    private Builder(com.dawid_ckw.avro.StringToUpperResponse other) {
       super(SCHEMA$, MODEL$);
       if (isValidValue(fields()[0], other.text)) {
         this.text = data().deepCopy(fields()[0].schema(), other.text);
@@ -218,7 +218,7 @@ public class Response extends org.apache.avro.specific.SpecificRecordBase implem
       * @param value The value of 'text'.
       * @return This builder.
       */
-    public StringToUpper.Response.Builder setText(java.lang.String value) {
+    public com.dawid_ckw.avro.StringToUpperResponse.Builder setText(java.lang.String value) {
       validate(fields()[0], value);
       this.text = value;
       fieldSetFlags()[0] = true;
@@ -238,7 +238,7 @@ public class Response extends org.apache.avro.specific.SpecificRecordBase implem
       * Clears the value of the 'text' field.
       * @return This builder.
       */
-    public StringToUpper.Response.Builder clearText() {
+    public com.dawid_ckw.avro.StringToUpperResponse.Builder clearText() {
       text = null;
       fieldSetFlags()[0] = false;
       return this;
@@ -246,9 +246,9 @@ public class Response extends org.apache.avro.specific.SpecificRecordBase implem
 
     @Override
     @SuppressWarnings("unchecked")
-    public Response build() {
+    public StringToUpperResponse build() {
       try {
-        Response record = new Response();
+        StringToUpperResponse record = new StringToUpperResponse();
         record.text = fieldSetFlags()[0] ? this.text : (java.lang.String) defaultValue(fields()[0]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
@@ -260,8 +260,8 @@ public class Response extends org.apache.avro.specific.SpecificRecordBase implem
   }
 
   @SuppressWarnings("unchecked")
-  private static final org.apache.avro.io.DatumWriter<Response>
-    WRITER$ = (org.apache.avro.io.DatumWriter<Response>)MODEL$.createDatumWriter(SCHEMA$);
+  private static final org.apache.avro.io.DatumWriter<StringToUpperResponse>
+    WRITER$ = (org.apache.avro.io.DatumWriter<StringToUpperResponse>)MODEL$.createDatumWriter(SCHEMA$);
 
   @Override public void writeExternal(java.io.ObjectOutput out)
     throws java.io.IOException {
@@ -269,8 +269,8 @@ public class Response extends org.apache.avro.specific.SpecificRecordBase implem
   }
 
   @SuppressWarnings("unchecked")
-  private static final org.apache.avro.io.DatumReader<Response>
-    READER$ = (org.apache.avro.io.DatumReader<Response>)MODEL$.createDatumReader(SCHEMA$);
+  private static final org.apache.avro.io.DatumReader<StringToUpperResponse>
+    READER$ = (org.apache.avro.io.DatumReader<StringToUpperResponse>)MODEL$.createDatumReader(SCHEMA$);
 
   @Override public void readExternal(java.io.ObjectInput in)
     throws java.io.IOException {

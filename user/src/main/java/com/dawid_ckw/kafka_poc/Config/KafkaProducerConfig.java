@@ -1,6 +1,7 @@
 package com.dawid_ckw.kafka_poc.Config;
 
 import com.dawid_ckw.avro.MessageRequested;
+import com.dawid_ckw.avro.StringToUpper;
 import io.confluent.kafka.serializers.KafkaAvroSerializer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
@@ -24,29 +25,34 @@ public class KafkaProducerConfig {
     }
 
     @Bean
-    public KafkaTemplate<String, MessageRequested> kafkaTemplate() {
-        return new KafkaTemplate<>(producerFactory());
-    }
-
-    @Bean
-    public ProducerFactory<String, String> ProducerFactoryResponseRequest() {
+    public ProducerFactory<String, StringToUpper> producerFactoryStringToUpper() {
         return new DefaultKafkaProducerFactory<>(producerConfigs());
     }
 
     @Bean
-    public KafkaTemplate<String, String> kafkaTemplateReplyResponse() {
-        return new KafkaTemplate<String, String>(ProducerFactoryResponseRequest());
+    public ProducerFactory<String, String> producerFactoryString() {
+        return new DefaultKafkaProducerFactory<>(producerConfigs());
     }
 
     @Bean
-    public ReplyingKafkaTemplate<String, String, String> replyingTemplate(ProducerFactory<String, String> pf,
-                                                                    ConcurrentKafkaListenerContainerFactory<String, String> factory) {
+    public KafkaTemplate<String, MessageRequested> kafkaTemplate() {
+        return new KafkaTemplate<>(producerFactory());
+    }
+
+
+    @Bean
+    public KafkaTemplate<String, String> kafkaTemplateReplyResponse() {
+        return new KafkaTemplate<String, String>(new DefaultKafkaProducerFactory<>(producerConfigs()));
+    }
+
+    @Bean
+    public ReplyingKafkaTemplate<String, StringToUpper, String> replyingTemplate(ProducerFactory<String, StringToUpper> pf,
+                                                                                 ConcurrentKafkaListenerContainerFactory<String, String> factory) {
 
         ConcurrentMessageListenerContainer<String, String> replyContainer =
                 factory.createContainer(KafkaTopics.TOPIC_API_NAMETOLOWERCASE_RESPONSE);
         replyContainer.getContainerProperties().setGroupId("so53151961.reply");
-        ReplyingKafkaTemplate<String, String, String> replyingKafkaTemplate = new ReplyingKafkaTemplate<>(pf, replyContainer);
-        return replyingKafkaTemplate;
+        return  new ReplyingKafkaTemplate<>(pf, replyContainer);
     }
 
     @Bean

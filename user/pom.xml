@@ -89,6 +89,7 @@
                    <subjects >
 
                        <message-requested-value>src/main/resources/avro/MessageRequested.avsc</message-requested-value>
+                       <api.nametolowercase-value>src/main/resources/avro/StringToUpper.avsc</api.nametolowercase-value>
                    </subjects>
                 </configuration>
                 <goals>

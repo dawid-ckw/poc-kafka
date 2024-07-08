@@ -15,7 +15,7 @@ import java.util.Map;
 
 @Configuration
 public class KafkaTopics {
-   public final static String TOPIC_USER_REQUESTED = "user.requested";
+    public final static String TOPIC_USER_REQUESTED = "user.requested";
     public final static String TOPIC_API_NAMETOLOWERCASE = "api.nametolowercase";
     public final static String TOPIC_API_NAMETOLOWERCASE_RESPONSE = "api.nametolowercase-response";
 }

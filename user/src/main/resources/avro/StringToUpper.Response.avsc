@@ -1,7 +1,7 @@
 {
   "namespace": "com.dawid_ckw.avro",
   "type": "record",
-  "name": "StringToUpper.Response",
+  "name": "StringToUpperResponse",
   "fields": [
     {
       "name": "text",

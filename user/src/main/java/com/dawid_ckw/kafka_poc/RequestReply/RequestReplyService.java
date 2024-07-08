@@ -10,6 +10,7 @@ import static com.dawid_ckw.kafka_poc.Config.KafkaTopics.TOPIC_API_NAMETOLOWERCA
 @Service
 public class RequestReplyService {
 
+    //TODO why here is String as an argument
     @KafkaListener(id = TOPIC_API_NAMETOLOWERCASE, topics = TOPIC_API_NAMETOLOWERCASE)
     @SendTo
     public String handle(String foo) {
