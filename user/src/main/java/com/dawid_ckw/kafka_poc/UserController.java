@@ -1,6 +1,8 @@
 package com.dawid_ckw.kafka_poc;
 
-import io.confluent.developer.MessageRequested;
+
+
+import com.dawid_ckw.avro.MessageRequested;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
