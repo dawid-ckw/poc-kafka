@@ -83,7 +83,10 @@
                     <outputPath/>
                     <previousSchemaPaths/>
                     <schemas/>
-                    <subjects/>
+                    <subjects>
+                        <BillRequest>src/main/resources/avro/BillRequest.avsc</BillRequest>
+                        <BillResponse>src/main/resources/avro/BillRequest.avsc</BillResponse>
+                    </subjects>
                 </configuration>
                 <goals>
                     <goal>register</goal>

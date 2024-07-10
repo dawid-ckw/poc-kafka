@@ -86,15 +86,21 @@
                     <schemaRegistryUrls>
                         <param>http://localhost:8085</param>
                     </schemaRegistryUrls>
-                   <subjects >
-
-                       <message-requested-value>src/main/resources/avro/MessageRequested.avsc</message-requested-value>
-                       <api.nametolowercase-value>src/main/resources/avro/StringToUpper.avsc</api.nametolowercase-value>
-                   </subjects>
+                    <outputDirectory>src/main/resources/avro</outputDirectory>
+                    <subjectPatterns>
+                        <param>^.*$</param>
+                    </subjectPatterns>
+                    <compatibilityLevels/>
+                    <messagePath/>
+                    <outputPath/>
+                    <previousSchemaPaths/>
+                    <schemas/>
+                    <subjects/>
                 </configuration>
                 <goals>
                     <goal>register</goal>
                 </goals>
+
             </plugin>
             <plugin>
                 <groupId>org.apache.avro</groupId>
