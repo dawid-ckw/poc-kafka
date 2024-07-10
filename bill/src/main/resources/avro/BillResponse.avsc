@@ -1,0 +1,37 @@
+{
+  "type": "record",
+  "name": "BillResponse",
+  "namespace": "com.dawid_ckw.avro",
+  "fields": [
+    {
+      "name": "children",
+      "type": {
+        "type": "array",
+        "items": {
+          "name": "Bill",
+          "type": "record",
+          "fields": [
+            {
+              "name": "startPeriod",
+              "type": {
+                "type": "int",
+                "logicalType": "date"
+              }
+            },
+            {
+              "name": "endPeriod",
+              "type": {
+                "type": "int",
+                "logicalType": "date"
+              }
+            },
+            {
+              "name": "amount",
+              "type": "double"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

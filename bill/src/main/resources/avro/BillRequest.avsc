@@ -1,0 +1,23 @@
+{
+  "type": "record",
+  "name": "BillRequest",
+  "namespace": "com.dawid_ckw.avro",
+  "fields": [
+    {
+      "name": "userId",
+      "type": "string"
+    },
+    {
+      "name": "period",
+      "type" : {
+        "name": "PeriodType",
+        "type": "enum",
+        "symbols": [
+          "YEAR",
+          "MONTH",
+          "DAY"
+        ]
+      }
+    }
+  ]
+}
