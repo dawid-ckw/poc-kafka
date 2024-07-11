@@ -85,7 +85,7 @@
                     <schemas/>
                     <subjects>
                         <BillRequest>src/main/resources/avro/BillRequest.avsc</BillRequest>
-                        <BillResponse>src/main/resources/avro/BillRequest.avsc</BillResponse>
+                        <BillResponse>src/main/resources/avro/BillResponse.avsc</BillResponse>
                     </subjects>
                 </configuration>
                 <goals>
